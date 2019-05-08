@@ -14,9 +14,10 @@ findbugs {
     effort = "max"
 }
 
+repositories {
     jcenter()
-    repositories {
 }
+
 
 val scalaMajor = "2.12"
 val scalaMinor = "8"
