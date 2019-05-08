@@ -1,13 +1,12 @@
 language: java
 sudo: false
 script:
-  - "./gradlew clean build"
+- "./gradlew clean build"
 deploy:
   provider: releases
-  user: Giulianini
-  password:
-    secure: GTZKX0lU8MDVpVV0Ni5cJtCYGhlsMPfbDeHrKjgDNCTkntuD++JiWYlIn1iyxRc4E2HkEUxit7cslaRcp7WiYBMzkwL4XfBrL1/q7QRqbPo5uVVWzDSOwcZ2KPS5GrBJUn0L2Tuc+16yQF/KBqel59qiuNqvuuH0m0jg8cecqmZBGgGDRA/UOckyFMSn/n/D/n3QD7MgtFp0sDsMDIrBMAYJCH7m5dSc7heTZ6MHpkVY/HemhG2TEB2J5+fJYyFnlq+/zHsD0uf1j5Jrrsl6mMkzmJf2pBkPgVb5b86Z3wamz+bkJjFPKcmYhxMfsbU+v6vM4KpPtLnTyz7v+TqMd9sFI4gEcMxDsT1YbxOvciWDUShVNECcEuUw25WyZefeeRvt+IZQZ9tOPqY1EHIlmbWCTM1uqI6eUJ+5EyshPZ2Tehy+GSaVwFN4pBmVdSuoifNwJzQZAP6G6eZufwCFIcALjCv6jp2zhuGIpBS//bIBx98uCAAgqpefX7Cv7ZVSvfZ9zCXkCUC++ZrHMcljwpG47S8/7XRK9Z7uXzw2hs6BldX5kRRs77GVTdSJMcei7N7PC6LLCoKMrc0I18zDdKRjvaWduJVoVpOvFf+wXpuQh6o8bFa/+wJ9FhG2O8wuXkKYyuC/qGTNSUMsFSEYe3Y1/ICCyBWVBwpo1lb7RPg=
-  file: /build/libs/pps-ci-lab.jar
-  skip_cleanup: true
+  api_key:
+    secure: D2vDvsLkvBWFZYes4upsFI1FpJC3I5JbBVrxNfxY3p75rR/0Vz8HgS0W+FHxJhcIcsAYZi9IU831IuRT6X3HRNTzPbf5SlY+N3x6WI3aKRnhgaGaoNDkVk6fnJP8nc/U1mq1lhF6/RnphhYUIMHo8ukVciXsfbP0B/aS69znEt/Y3bUk6hYbq4INHlKo57q9J7JQFd261DBAeikUN5HgboPNQ/vuywvLeNEqiUt1bMKnoz9PDAGFz9NC/8STc/UlPWQ3z1qrsTIG3a/QCP4yUak/cVzgawOujRzbsxbCEEny+ionk/H0CRzJmJDSATuiadulDDgsQW0J9tdnilJH3kvS/sV3qEwn6H0PRuFPmWfHyyqhrX4k3Q17dnsUvh2nwjC6YO4N28NwsWK9ZcBR3+qCkLI4OK0Rb2/OM0tbUsASpvNm3Fvxp1DhHurNEY2NM82V0XTgDyPzdg3mqVhBNeQevmtXemF2VAQnCbgu7Chq8pbttw1HTTpCEQeO4Umpbs0Z4j3eRJsd73HyleL06yekmWZv+rxijZomLWv6+J0DObjFyr3+DIoOCIJYrmjW9lwxhVmRVs/le0Qe2K3Tl0lGGWN6MWyS1xvVr7HqemBRv6GMkwhiH8kvAkB2goW9aeS+lzpIB0eCTrXGbfH9hYU2LCwPaiwM33bn9Fj/Opc=
+  file: "/build/libs/pps-ci-lab.jar"
   on:
-    tags: true
+    repo: Giulianini/pps-ci-lab
+    branch: develop
