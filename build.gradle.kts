@@ -3,8 +3,9 @@ plugins {
     scala
     id("org.scoverage") version "3.0.0"
     id("com.github.maiflai.scalatest") version "0.21"
-    pmd
     findbugs
+    pmd
+    checkstyle
 }
 
 findbugs {
@@ -13,8 +14,8 @@ findbugs {
     effort = "max"
 }
 
-repositories {
     jcenter()
+    repositories {
 }
 
 val scalaMajor = "2.12"
